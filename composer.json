@@ -1,0 +1,42 @@
+{
+  "name": "maxkut/rtoperator",
+  "description": "Client for www.rtoperator.ru",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "keywords": [
+    "rtoperator",
+    "rtoperator.ru",
+    "api",
+    "client"
+  ],
+  "authors": [
+    {
+      "name": "Maksim Kutishchev",
+      "email": "max@amopro.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "~6.0",
+    "illuminate/support": "^5 | ^6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.4",
+    "symfony/var-dumper": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rtoperator\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

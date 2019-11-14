@@ -1,0 +1,53 @@
+[
+  {
+    "tour_id": "95",
+    "title": "<font color=CC0000>Волжский Week End («Парк Инн4*/Чайка 3*»)</font> ",
+    "country_id": "9",
+    "category_id": "33",
+    "days": "3 дня / 2 ночи",
+    "cities": "Москва - Ростов Великий - Ярославль - Углич - Мышкин - Сергиев Посад - Москва",
+    "htmlCode": "",
+    "htmlCode2": "",
+    "datetime_updated": "2019-11-06 11:19:45",
+    "images": [
+      {
+        "thumb": "https://www.rtoperator.ru/images/tours/95/thumbs/0.jpg",
+        "image": "https://www.rtoperator.ru/images/tours/95/images/0.jpg"
+      }
+    ]
+  },
+  {
+    "tour_id": "186",
+    "title": "<font color=CC0000>Рождество в Костроме</font>",
+    "country_id": "9",
+    "category_id": "6",
+    "days": "3 дня / 2 ночи",
+    "cities": "Москва - Ростов Великий - Ярославль - Кострома - Плес - Москва",
+    "htmlCode": "",
+    "htmlCode2": "",
+    "datetime_updated": "2019-09-09 15:52:40",
+    "images": [
+      {
+        "thumb": "https://www.rtoperator.ru/images/tours/186/thumbs/0.jpg",
+        "image": "https://www.rtoperator.ru/images/tours/186/images/0.jpg"
+      }
+    ]
+  },
+  {
+    "tour_id": "191",
+    "title": "Суздальское княжество (отель 3*)",
+    "country_id": "9",
+    "category_id": "1",
+    "days": "2 дня / 1 ночь",
+    "cities": "Москва - Суздаль - Кидекша - Владимир - Боголюбово - Москва",
+    "htmlCode": "",
+    "htmlCode2": "",
+    "datetime_updated": "2019-10-07 18:52:17",
+    "images": [
+      {
+        "thumb": "https://www.rtoperator.ru/images/tours/191/thumbs/0.jpg",
+        "image": "https://www.rtoperator.ru/images/tours/191/images/0.jpg"
+      }
+    ]
+  }
+]

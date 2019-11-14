@@ -1,0 +1,437 @@
+[
+  {
+    "tour_id": "93",
+    "position": "1",
+    "city": "Ростов Великий"
+  },
+  {
+    "tour_id": "612",
+    "position": "3",
+    "city": "Дивеево"
+  },
+  {
+    "tour_id": "457",
+    "position": "1",
+    "city": "Углич"
+  },
+  {
+    "tour_id": "99",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "99",
+    "position": "1",
+    "city": "Вышний Волочек"
+  },
+  {
+    "tour_id": "109",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "292",
+    "position": "2",
+    "city": "Боголюбово"
+  },
+  {
+    "tour_id": "218",
+    "position": "1",
+    "city": "Вышний Волочек"
+  },
+  {
+    "tour_id": "135",
+    "position": "4",
+    "city": "Печоры"
+  },
+  {
+    "tour_id": "105",
+    "position": "3",
+    "city": "Ростов Великий"
+  },
+  {
+    "tour_id": "105",
+    "position": "2",
+    "city": "Переславль-залесский"
+  },
+  {
+    "tour_id": "105",
+    "position": "1",
+    "city": "Александров"
+  },
+  {
+    "tour_id": "105",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "96",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "96",
+    "position": "1",
+    "city": "Вышний Волочек"
+  },
+  {
+    "tour_id": "219",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "1004",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "556",
+    "position": "2",
+    "city": "Санкт-петербург"
+  },
+  {
+    "tour_id": "684",
+    "position": "2",
+    "city": "Санкт-петербург"
+  },
+  {
+    "tour_id": "684",
+    "position": "1",
+    "city": "Петергоф"
+  },
+  {
+    "tour_id": "683",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "97",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "121",
+    "position": "2",
+    "city": "Ярославль"
+  },
+  {
+    "tour_id": "91",
+    "position": "3",
+    "city": "Кострома"
+  },
+  {
+    "tour_id": "50",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "130",
+    "position": "2",
+    "city": "Ярославль"
+  },
+  {
+    "tour_id": "321",
+    "position": "2",
+    "city": "Мышкин"
+  },
+  {
+    "tour_id": "432",
+    "position": "1",
+    "city": "Александров"
+  },
+  {
+    "tour_id": "432",
+    "position": "2",
+    "city": "Суздаль"
+  },
+  {
+    "tour_id": "157",
+    "position": "2",
+    "city": "Боголюбово"
+  },
+  {
+    "tour_id": "162",
+    "position": "5",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "512",
+    "position": "5",
+    "city": "Кидекша"
+  },
+  {
+    "tour_id": "163",
+    "position": "7",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "164",
+    "position": "5",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "94",
+    "position": "1",
+    "city": "Переславль-залесский"
+  },
+  {
+    "tour_id": "104",
+    "position": "3",
+    "city": "Ярославль"
+  },
+  {
+    "tour_id": "104",
+    "position": "2",
+    "city": "Ростов Великий"
+  },
+  {
+    "tour_id": "100",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "290",
+    "position": "2",
+    "city": "Калязин"
+  },
+  {
+    "tour_id": "286",
+    "position": "6",
+    "city": "Ярославль"
+  },
+  {
+    "tour_id": "286",
+    "position": "5",
+    "city": "Кострома"
+  },
+  {
+    "tour_id": "286",
+    "position": "4",
+    "city": "Иваново"
+  },
+  {
+    "tour_id": "466",
+    "position": "8",
+    "city": "Переславль-залесский"
+  },
+  {
+    "tour_id": "284",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "115",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "116",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "114",
+    "position": "5",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "117",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "118",
+    "position": "7",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "125",
+    "position": "2",
+    "city": "Ростов Великий"
+  },
+  {
+    "tour_id": "128",
+    "position": "2",
+    "city": "Мышкин"
+  },
+  {
+    "tour_id": "97",
+    "position": "4",
+    "city": "Боголюбово"
+  },
+  {
+    "tour_id": "947",
+    "position": "2",
+    "city": "Зарайск"
+  },
+  {
+    "tour_id": "125",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "311",
+    "position": "4",
+    "city": "Владимир"
+  },
+  {
+    "tour_id": "130",
+    "position": "4",
+    "city": "Плес"
+  },
+  {
+    "tour_id": "135",
+    "position": "1",
+    "city": "Пушкинские Горы"
+  },
+  {
+    "tour_id": "133",
+    "position": "4",
+    "city": "Владимир"
+  },
+  {
+    "tour_id": "212",
+    "position": "4",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "319",
+    "position": "1",
+    "city": "Переславль-залесский"
+  },
+  {
+    "tour_id": "319",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "385",
+    "position": "2",
+    "city": "Семибратово"
+  },
+  {
+    "tour_id": "315",
+    "position": "5",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "140",
+    "position": "2",
+    "city": "Великий Новгород"
+  },
+  {
+    "tour_id": "141",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "359",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "815",
+    "position": "4",
+    "city": "Рязань"
+  },
+  {
+    "tour_id": "373",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "143",
+    "position": "3",
+    "city": "Ярославль"
+  },
+  {
+    "tour_id": "156",
+    "position": "2",
+    "city": "Кострома"
+  },
+  {
+    "tour_id": "156",
+    "position": "1",
+    "city": "Суздаль"
+  },
+  {
+    "tour_id": "156",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "162",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "314",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "452",
+    "position": "1",
+    "city": "Сергиев Посад"
+  },
+  {
+    "tour_id": "452",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "318",
+    "position": "1",
+    "city": "Углич"
+  },
+  {
+    "tour_id": "157",
+    "position": "3",
+    "city": "Суздаль"
+  },
+  {
+    "tour_id": "151",
+    "position": "3",
+    "city": "Мартыново"
+  },
+  {
+    "tour_id": "175",
+    "position": "1",
+    "city": "Александров"
+  },
+  {
+    "tour_id": "153",
+    "position": "0",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "166",
+    "position": "5",
+    "city": "Москва"
+  },
+  {
+    "tour_id": "166",
+    "position": "3",
+    "city": "Кострома"
+  },
+  {
+    "tour_id": "166",
+    "position": "4",
+    "city": "Плес"
+  },
+  {
+    "tour_id": "173",
+    "position": "3",
+    "city": "Александров"
+  },
+  {
+    "tour_id": "174",
+    "position": "1",
+    "city": "Александров"
+  },
+  {
+    "tour_id": "812",
+    "position": "0",
+    "city": "Москва"
+  }
+]

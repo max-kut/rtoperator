@@ -1,0 +1,72 @@
+[
+  {
+    "service_id": "192",
+    "type_name": "single",
+    "type_title": "надбавка за одноместное проживание",
+    "sum_for_insider": "-950",
+    "sum_for_foreigner": "-950"
+  },
+  {
+    "service_id": "294",
+    "type_name": "single",
+    "type_title": "надбавка за одноместное проживание",
+    "sum_for_insider": "-1600",
+    "sum_for_foreigner": "-1600"
+  },
+  {
+    "service_id": "191",
+    "type_name": "single",
+    "type_title": "надбавка за одноместное проживание",
+    "sum_for_insider": "-600",
+    "sum_for_foreigner": "-600"
+  },
+  {
+    "service_id": "409",
+    "type_name": "additionalPlace",
+    "type_title": "скидка за дополнительное место",
+    "sum_for_insider": "400",
+    "sum_for_foreigner": "400"
+  },
+  {
+    "service_id": "409",
+    "type_name": "single",
+    "type_title": "надбавка за одноместное проживание",
+    "sum_for_insider": "-1900",
+    "sum_for_foreigner": "-1900"
+  },
+  {
+    "service_id": "196",
+    "type_name": "single",
+    "type_title": "надбавка за одноместное проживание",
+    "sum_for_insider": "-3200",
+    "sum_for_foreigner": "-3200"
+  },
+  {
+    "service_id": "196",
+    "type_name": "additionalPlace",
+    "type_title": "скидка за дополнительное место",
+    "sum_for_insider": "400",
+    "sum_for_foreigner": "400"
+  },
+  {
+    "service_id": "295",
+    "type_name": "additionalPlace",
+    "type_title": "скидка за дополнительное место",
+    "sum_for_insider": "400",
+    "sum_for_foreigner": "400"
+  },
+  {
+    "service_id": "198",
+    "type_name": "additionalPlace",
+    "type_title": "скидка за дополнительное место",
+    "sum_for_insider": "400",
+    "sum_for_foreigner": "400"
+  },
+  {
+    "service_id": "194",
+    "type_name": "additionalPlace",
+    "type_title": "скидка за дополнительное место",
+    "sum_for_insider": "400",
+    "sum_for_foreigner": "400"
+  }
+]

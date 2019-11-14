@@ -1,0 +1,263 @@
+{
+  "tour": [
+    {
+      "tour_id": "95",
+      "title": "<font color=CC0000>Волжский Week End («Парк Инн4*/Чайка 3*»)</font> ",
+      "country_id": "9",
+      "category_id": "33",
+      "days": "3 дня / 2 ночи",
+      "cities": "Москва - Ростов Великий - Ярославль - Углич - Мышкин - Сергиев Посад - Москва",
+      "htmlCode": "",
+      "htmlCode2": "",
+      "datetime_updated": "2019-11-06 11:19:45",
+      "images": [
+        "https://www.rtoperator.ru/images/tours/95/thumbs/0.jpg"
+      ],
+      "dates": [
+        {
+          "tour_id": "95",
+          "date_id": "15131",
+          "date_start": "2020-01-02",
+          "date_finish": "2020-01-04",
+          "rooms": "22",
+          "places": "45",
+          "use_season_discount": "0",
+          "rooms_available": "12",
+          "places_available": "27",
+          "datetime_updated": "2019-11-13 20:27:15"
+        }
+      ],
+      "services": [
+        {
+          "service_id": "196",
+          "tour_id": "95",
+          "title": "проживание",
+          "price_for_insider": "12850",
+          "price_for_foreigner": "12850",
+          "hotel_id": null,
+          "discount": [
+            {
+              "type_name": "additionalPlace",
+              "type_title": "скидка за дополнительное место",
+              "sum_for_insider": "400",
+              "sum_for_foreigner": "400",
+              "service_id": "196"
+            },
+            {
+              "type_name": "bedBreakfast",
+              "type_title": "только завтраки",
+              "sum_for_insider": "1600",
+              "sum_for_foreigner": "1600",
+              "service_id": "196"
+            },
+            {
+              "type_name": "fullPansion",
+              "type_title": "завтраки, обеды и ужины",
+              "sum_for_insider": "0",
+              "sum_for_foreigner": "0",
+              "service_id": "196"
+            },
+            {
+              "type_name": "halfPansion",
+              "type_title": "завтраки и обеды",
+              "sum_for_insider": "700",
+              "sum_for_foreigner": "700",
+              "service_id": "196"
+            },
+            {
+              "type_name": "single",
+              "type_title": "надбавка за одноместное проживание",
+              "sum_for_insider": "-3200",
+              "sum_for_foreigner": "-3200",
+              "service_id": "196"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tour_id": "186",
+      "title": "<font color=CC0000>Рождество в Костроме</font>",
+      "country_id": "9",
+      "category_id": "6",
+      "days": "3 дня / 2 ночи",
+      "cities": "Москва - Ростов Великий - Ярославль - Кострома - Плес - Москва",
+      "htmlCode": "<hr>",
+      "htmlCode2": "",
+      "datetime_updated": "2019-09-09 15:52:40",
+      "images": [
+        "https://www.rtoperator.ru/images/tours/186/thumbs/0.jpg"
+      ],
+      "dates": [
+        {
+          "tour_id": "186",
+          "date_id": "14856",
+          "date_start": "2020-01-06",
+          "date_finish": "2020-01-08",
+          "rooms": "24",
+          "places": "45",
+          "use_season_discount": "0",
+          "rooms_available": "6",
+          "places_available": "12",
+          "datetime_updated": "2019-11-14 12:16:39"
+        }
+      ],
+      "services": [
+        {
+          "service_id": "285",
+          "tour_id": "186",
+          "title": "проживание",
+          "price_for_insider": "12990",
+          "price_for_foreigner": "12990",
+          "hotel_id": null,
+          "discount": [
+            {
+              "type_name": "single",
+              "type_title": "надбавка за одноместное проживание",
+              "sum_for_insider": "-3700",
+              "sum_for_foreigner": "-3700",
+              "service_id": "285"
+            },
+            {
+              "type_name": "fullPansion",
+              "type_title": "завтраки, обеды и ужины",
+              "sum_for_insider": "0",
+              "sum_for_foreigner": "0",
+              "service_id": "285"
+            },
+            {
+              "type_name": "halfPansion",
+              "type_title": "завтраки и обеды",
+              "sum_for_insider": "340",
+              "sum_for_foreigner": "340",
+              "service_id": "285"
+            },
+            {
+              "type_name": "additionalPlace",
+              "type_title": "скидка за дополнительное место",
+              "sum_for_insider": "400",
+              "sum_for_foreigner": "400",
+              "service_id": "285"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "category": [
+    {
+      "category_id": "3",
+      "title": "Орёл",
+      "datetime_updated": "2017-11-02 17:05:09",
+      "html": "",
+      "order": "54"
+    },
+    {
+      "category_id": "7",
+      "title": "Масленица 2019",
+      "datetime_updated": "2019-11-12 13:12:50",
+      "html": "",
+      "order": "27"
+    }
+  ],
+  "categoryMap": [
+    {
+      "id": "0",
+      "children": "3,7,12,60,61,88,10,13,14,74,15,21,22,67,68,69,24,32,30,31,33,34,35,40,51,41,42,43,45,52,53,54,55,1,2,4,6,8,9,11,16,17,18,19,23,36,37,38,39,48,44,49,46,47,50,70,56,57,58,59,62,64,65,63,66,71,72,73,75,76,77,78,79,80,81,82,83,84,85,86,87,89,90,91"
+    },
+    {
+      "id": "55",
+      "children": "1,2,4,6,8,9,11,16,17,18,19,23,36,37,38,39,48,44,49,46,47,50,70"
+    },
+    {
+      "id": "22",
+      "children": "67,68,69"
+    },
+    {
+      "id": "65",
+      "children": "63,66"
+    }
+  ],
+  "country": [
+    {
+      "id": "4",
+      "name": "Турция",
+      "title": "Горящие туры в Турцию - цены 2010 года. Поиск тура в Турцию и подбор.",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "turkey",
+      "datetime_updated": "2014-07-23 16:55:19"
+    },
+    {
+      "id": "3",
+      "name": "Египет",
+      "title": "Горящие туры в Египет - цены 2010 года. Поиск тура в Египет и подбор.",
+      "catalogTitle": "Отели Египта",
+      "hotelsTitle": "Все отели Египта",
+      "searchTitle": "",
+      "domainName": "egypt",
+      "datetime_updated": "2014-06-22 19:42:25"
+    },
+    {
+      "id": "46",
+      "name": "Великобритания",
+      "title": "",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "great-britain",
+      "datetime_updated": "2014-07-23 14:27:42"
+    },
+    {
+      "id": "47",
+      "name": "Венгрия",
+      "title": "",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "hungary",
+      "datetime_updated": "2014-07-23 14:34:12"
+    },
+    {
+      "id": "48",
+      "name": "Индонезия (о. Бали)",
+      "title": "",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "indonesia",
+      "datetime_updated": "2014-07-23 15:58:25"
+    },
+    {
+      "id": "49",
+      "name": "Иордания",
+      "title": "",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "jordania",
+      "datetime_updated": "2014-07-23 15:59:48"
+    },
+    {
+      "id": "50",
+      "name": "Маврикий",
+      "title": "",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "mauritius",
+      "datetime_updated": "2014-07-23 16:18:40"
+    },
+    {
+      "id": "51",
+      "name": "Малайзия",
+      "title": "",
+      "catalogTitle": "",
+      "hotelsTitle": "",
+      "searchTitle": "",
+      "domainName": "malaysia",
+      "datetime_updated": "2014-07-23 16:20:09"
+    }
+  ]
+}

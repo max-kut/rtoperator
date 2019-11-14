@@ -1,0 +1,30 @@
+[
+  {
+    "type_name": "single",
+    "type_title": "надбавка за одноместное проживание",
+    "sum_for_insider": "-3700",
+    "sum_for_foreigner": "-3700",
+    "service_id": "285"
+  },
+  {
+    "type_name": "fullPansion",
+    "type_title": "завтраки, обеды и ужины",
+    "sum_for_insider": "0",
+    "sum_for_foreigner": "0",
+    "service_id": "285"
+  },
+  {
+    "type_name": "halfPansion",
+    "type_title": "завтраки и обеды",
+    "sum_for_insider": "340",
+    "sum_for_foreigner": "340",
+    "service_id": "285"
+  },
+  {
+    "type_name": "additionalPlace",
+    "type_title": "скидка за дополнительное место",
+    "sum_for_insider": "400",
+    "sum_for_foreigner": "400",
+    "service_id": "285"
+  }
+]

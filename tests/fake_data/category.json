@@ -1,0 +1,35 @@
+[
+  {
+    "category_id": "1",
+    "title": "2 дня",
+    "datetime_updated": "2019-11-12 13:13:15",
+    "html": "",
+    "order": "7"
+  },
+  {
+    "category_id": "2",
+    "title": "Ноябрьские праздники",
+    "datetime_updated": "2019-11-12 13:13:06",
+    "html": "",
+    "order": "13"
+  },
+  {
+    "category_id": "3",
+    "title": "Орёл",
+    "datetime_updated": "2017-11-02 17:05:09",
+    "order": "54"
+  },
+  {
+    "category_id": "4",
+    "title": "Международный женский день (8 марта)",
+    "datetime_updated": "2019-11-12 13:12:57",
+    "html": "",
+    "order": "21"
+  },
+  {
+    "category_id": "7",
+    "title": "Масленица 2019",
+    "datetime_updated": "2019-11-12 13:12:50",
+    "order": "27"
+  }
+]

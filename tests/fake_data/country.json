@@ -1,0 +1,36 @@
+[
+  {
+    "id": "4",
+    "name": "Турция",
+    "title": "",
+    "domainName": "turkey",
+    "datetime_updated": "2014-07-23 16:55:19"
+  },
+  {
+    "id": "3",
+    "name": "Египет",
+    "title": "",
+    "catalogTitle": "",
+    "hotelsTitle": "",
+    "domainName": "egypt",
+    "datetime_updated": "2014-06-22 19:42:25"
+  },
+  {
+    "id": "46",
+    "name": "Великобритания",
+    "domainName": "great-britain",
+    "datetime_updated": "2014-07-23 14:27:42"
+  },
+  {
+    "id": "47",
+    "name": "Венгрия",
+    "domainName": "hungary",
+    "datetime_updated": "2014-07-23 14:34:12"
+  },
+  {
+    "id": "48",
+    "name": "Индонезия (о. Бали)",
+    "domainName": "indonesia",
+    "datetime_updated": "2014-07-23 15:58:25"
+  }
+]

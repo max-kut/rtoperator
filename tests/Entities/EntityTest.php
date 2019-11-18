@@ -26,6 +26,8 @@ class EntityTest extends TestCase
             'timestamp'  => '13232090313',
         ]);
 
+        $this->assertTrue(isset($entity->int));
+
         $this->assertIsInt($entity->int);
         $this->assertIsInt($entity->integer);
         $this->assertIsFloat($entity->float);

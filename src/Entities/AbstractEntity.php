@@ -24,18 +24,18 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
      * @var array
      */
     protected $attributes = [];
-    
+
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
     protected $casts = [];
-    
+
     protected $strictParams = true;
-    
+
     protected $dateFormat;
-    
+
     /**
      * AbstractEntity constructor.
      *
@@ -47,7 +47,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
             $this->setAttribute($key, $value);
         }
     }
-    
+
     /**
      * @param array $attributes
      * @return static
@@ -56,7 +56,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return new static($attributes);
     }
-    
+
     /**
      * @param $name
      * @return mixed
@@ -66,7 +66,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->getAttribute($name);
     }
-    
+
     /**
      * @param $name
      * @param $value
@@ -76,7 +76,25 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         $this->setAttribute($name, $value);
     }
-    
+
+    /**
+     * @param $name
+     * @return bool
+     */
+    public function __isset($name)
+    {
+        return array_key_exists($name, $this->attributes) || $this->hasCast($name) ||
+            method_exists($this, 'get' . Str::studly($name) . 'Attribute');
+    }
+
+    /**
+     * @param $name
+     */
+    public function __unset($name)
+    {
+        unset($this->attributes[$name]);
+    }
+
     /**
      * @param $key
      * @return mixed
@@ -84,24 +102,24 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     protected function getAttribute($key)
     {
         $value = $this->attributes[$key] ?? null;
-        
+
         if (method_exists($this, $method = 'get' . Str::studly($key) . 'Attribute')) {
             return $this->{$method}($value);
         }
-        
+
         if ($this->hasCast($key)) {
             return $this->castAttribute($key, $value);
         }
-        
+
         if (!array_key_exists($key, $this->attributes) && $this->strictParams) {
             throw new NotDefinedPropertyException(
                 sprintf('in %s not exists "%s" property', static::class, $key)
             );
         }
-        
+
         return $value;
     }
-    
+
     /**
      * Determine whether an attribute should be cast to a native type.
      *
@@ -114,10 +132,10 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
         if (array_key_exists($key, $this->casts)) {
             return $types ? in_array($this->getCastType($key), (array)$types, true) : true;
         }
-        
+
         return false;
     }
-    
+
     /**
      * Get the type of cast for a model attribute.
      *
@@ -129,14 +147,14 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
         if ($this->isCustomDateTimeCast($this->casts[$key])) {
             return 'custom_datetime';
         }
-        
+
         if ($this->isDecimalCast($this->casts[$key])) {
             return 'decimal';
         }
-        
+
         return trim(strtolower($this->casts[$key]));
     }
-    
+
     /**
      * Determine if the cast type is a custom date time cast.
      *
@@ -148,7 +166,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
         return strncmp($cast, 'date:', 5) === 0 ||
             strncmp($cast, 'datetime:', 9) === 0;
     }
-    
+
     /**
      * Determine if the cast type is a decimal cast.
      *
@@ -159,7 +177,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return strncmp($cast, 'decimal:', 8) === 0;
     }
-    
+
     /**
      * Cast an attribute to a native PHP type.
      *
@@ -172,7 +190,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
         if (is_null($value)) {
             return $value;
         }
-        
+
         switch ($this->getCastType($key)) {
             case 'int':
             case 'integer':
@@ -206,7 +224,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
                 return $value;
         }
     }
-    
+
     /**
      * Decode the given float.
      *
@@ -226,7 +244,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
                 return (float)$value;
         }
     }
-    
+
     /**
      * Return a decimal as string.
      *
@@ -238,7 +256,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return number_format($value, $decimals, '.', '');
     }
-    
+
     /**
      * Return a timestamp as DateTime object with time set to 00:00:00.
      *
@@ -249,7 +267,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->asDateTime($value)->startOfDay();
     }
-    
+
     /**
      * Return a timestamp as DateTime object.
      *
@@ -264,7 +282,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
         if ($value instanceof Carbon || $value instanceof CarbonInterface) {
             return Date::instance($value);
         }
-        
+
         // If the value is already a DateTime instance, we will just skip the rest of
         // these checks since they will be a waste of time, and hinder performance
         // when checking the field. We will just return the DateTime right away.
@@ -273,34 +291,34 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
                 $value->format('Y-m-d H:i:s.u'), $value->getTimezone()
             );
         }
-        
+
         // If this value is an integer, we will assume it is a UNIX timestamp's value
         // and format a Carbon object from this timestamp. This allows flexibility
         // when defining your date fields as they might be UNIX timestamps here.
         if (is_numeric($value)) {
             return Date::createFromTimestamp($value);
         }
-        
+
         // If the value is in simply year, month, day format, we will instantiate the
         // Carbon instances from that format. Again, this provides for simple date
         // fields on the database, while still supporting Carbonized conversion.
         if ($this->isStandardDateFormat($value)) {
             return Date::instance(Carbon::createFromFormat('Y-m-d', $value)->startOfDay());
         }
-        
+
         $format = $this->getDateFormat();
-        
+
         // https://bugs.php.net/bug.php?id=75577
         if (version_compare(PHP_VERSION, '7.3.0-dev', '<')) {
             $format = str_replace('.v', '.u', $format);
         }
-        
+
         // Finally, we will just assume this date is in the format used by default on
         // the database connection and use that format to create the Carbon object
         // that is returned back out to the developers after we convert it here.
         return Date::createFromFormat($format, $value);
     }
-    
+
     /**
      * Determine if the given value is a standard date format.
      *
@@ -311,7 +329,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return preg_match('/^(\d{4})-(\d{1,2})-(\d{1,2})$/', $value);
     }
-    
+
     /**
      * Convert a DateTime to a storable string.
      *
@@ -326,7 +344,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
                 $this->getDateFormat()
             );
     }
-    
+
     /**
      * Return a timestamp as unix timestamp.
      *
@@ -337,7 +355,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->asDateTime($value)->getTimestamp();
     }
-    
+
     /**
      * Get the format for database stored dates.
      *
@@ -347,7 +365,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->dateFormat ?: 'Y-m-d H:i:s';
     }
-    
+
     /**
      * Decode the given JSON back into an array or object.
      *
@@ -367,7 +385,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     protected function setAttribute($key, $value): void
     {
         $this->validateSetAttribute($key);
-        
+
         if (method_exists($this, $method = 'set' . Str::studly($key) . 'Attribute')) {
             $this->{$method}($value);
         } else if (array_key_exists($key, $this->attributes) || $this->hasCast($key)) {
@@ -380,7 +398,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
             $this->attributes[$key] = $value;
         }
     }
-    
+
     /**
      * @param $key
      */
@@ -392,13 +410,13 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
         if (!array_key_exists($key, $this->attributes) &&
             !$this->hasCast($key) &&
             !method_exists($this, 'set' . Str::studly($key) . 'Attribute')) {
-            
+
             throw new NotDefinedPropertyException(
                 sprintf('in %s not exists "%s" property', static::class, $key)
             );
         }
     }
-    
+
     /**
      * Determine whether a value is Date / DateTime castable for inbound manipulation.
      *
@@ -409,7 +427,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->hasCast($key, ['date', 'datetime']);
     }
-    
+
     /**
      * Determine whether a value is JSON castable for inbound manipulation.
      *
@@ -420,7 +438,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->hasCast($key, ['array', 'json', 'object', 'collection']);
     }
-    
+
     /**
      * Cast the given attribute to JSON.
      *
@@ -431,15 +449,15 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     protected function castAttributeAsJson($key, $value)
     {
         $value = $this->asJson($value);
-        
+
         if ($value === false) {
             throw new \RuntimeException(sprintf("Unable to encode attribute [%s] for [%s] to JSON: %s.",
                 $key, static::class, json_last_error_msg()));
         }
-        
+
         return $value;
     }
-    
+
     /**
      * Encode the given value as JSON.
      *
@@ -450,7 +468,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return json_encode($value);
     }
-    
+
     /**
      * Specify data which should be serialized to JSON
      *
@@ -461,11 +479,11 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
      */
     public function jsonSerialize()
     {
-        return collect($this->attributes)->keys()->mapWithKeys(function($key){
+        return collect($this->attributes)->keys()->mapWithKeys(function ($key) {
             return [$key => $this->getAttribute($key)];
         })->jsonSerialize();
     }
-    
+
     /**
      * Get the instance as an array.
      *
@@ -475,7 +493,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return $this->jsonSerialize();
     }
-    
+
     /**
      * Convert the object to its JSON representation.
      *
@@ -486,7 +504,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     {
         return json_encode($this->jsonSerialize(), $options);
     }
-    
+
     /**
      * Convert the model to its string representation.
      *

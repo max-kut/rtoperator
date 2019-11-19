@@ -2,6 +2,7 @@
 
 namespace Rtoperator\Entities;
 
+use Rtoperator\Client;
 use Rtoperator\Data\DatesCollection;
 use Rtoperator\Data\ServicesCollection;
 
@@ -20,6 +21,7 @@ use Rtoperator\Data\ServicesCollection;
  * @property array $images
  * @property \Rtoperator\Data\DatesCollection|\Rtoperator\Entities\Date[] $dates
  * @property \Rtoperator\Data\ServicesCollection|\Rtoperator\Entities\Service[] $services
+ * @property-read string $public_url - публичная ссылка на тур
  */
 class Tour extends AbstractEntity
 {
@@ -63,6 +65,14 @@ class Tour extends AbstractEntity
                 return str_replace('/thumbs/', '/images/', $img);
             }
         }, $value)));
+    }
+
+    /**
+     * @return string
+     */
+    protected function getPublicUrlAttribute(): string
+    {
+        return Client::BASE_URl . '/tour.php?id=' . $this->getAttribute('tour_id');
     }
 
     /**

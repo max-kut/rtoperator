@@ -42,12 +42,28 @@ class Tour extends AbstractEntity
     ];
 
     /**
+     * Обработка заголовка
+     *
      * @param $value
      */
     protected function setTitleAttribute($value)
     {
         if (preg_match('/^\s*<font[^>]*>(.+)<\/font>\s*$/i', $value, $matches)) {
             $this->attributes['title'] = trim($matches[1]);
+        } else {
+            $this->attributes['title'] = trim($value);
+        }
+    }
+
+    /**
+     * Обработка продолжительности
+     *
+     * @param $value
+     */
+    protected function setDaysAttribute($value)
+    {
+        if (preg_match('/^<([a-zA-Z-]+)[^>]*>(?P<val>.+)<\/\1>/', trim((string)$value), $matches)) {
+            $this->attributes['title'] = trim($matches['val']);
         } else {
             $this->attributes['title'] = trim($value);
         }

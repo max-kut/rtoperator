@@ -49,12 +49,12 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
     }
 
     /**
-     * @param array $attributes
+     * @param array|static $attributes
      * @return static
      */
-    public static function make(array $attributes)
+    public static function make($attributes)
     {
-        return new static($attributes);
+        return new static($attributes instanceof self ? $attributes->toArray() : (array)$attributes);
     }
 
     /**

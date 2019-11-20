@@ -32,7 +32,10 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
      */
     protected $casts = [];
 
-    protected $strictParams = true;
+    /**
+     * @var bool $strictParams - Возмолжность добавлять свойства, которые не определены в сущности
+     */
+    public $strictParams = true;
 
     protected $dateFormat;
 

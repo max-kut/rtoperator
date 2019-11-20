@@ -391,6 +391,7 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
 
         if (method_exists($this, $method = 'set' . Str::studly($key) . 'Attribute')) {
             $this->{$method}($value);
+            return;
         } else if (array_key_exists($key, $this->attributes) || $this->hasCast($key)) {
             if ($value && $this->isDateCastable($key)) {
                 $value = $this->fromDateTime($value);
@@ -398,8 +399,8 @@ abstract class AbstractEntity implements \JsonSerializable, Jsonable, Arrayable
             if ($this->isJsonCastable($key) && !is_null($value)) {
                 $value = $this->castAttributeAsJson($key, $value);
             }
-            $this->attributes[$key] = $value;
         }
+        $this->attributes[$key] = $value;
     }
 
     /**

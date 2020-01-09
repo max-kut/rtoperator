@@ -11,6 +11,7 @@ namespace Rtoperator\Entities;
  * @property float $sum_for_foreigner
  * @property bool $use_season_discount
  * @property int $season_discount_sign
+ * @property int $seat_choose_cost
  */
 class Price extends AbstractEntity
 {
@@ -20,6 +21,7 @@ class Price extends AbstractEntity
         'sum_for_insider'      => 'float',
         'sum_for_foreigner'    => 'float',
         'use_season_discount'  => 'boolean',
-        'season_discount_sign' => 'int'
+        'season_discount_sign' => 'int',
+        'seat_choose_cost'     => 'int',
     ];
 }

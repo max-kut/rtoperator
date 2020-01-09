@@ -23,7 +23,7 @@ use Rtoperator\Data\TourCollection;
  */
 class Client
 {
-    const VERSION = 1.2;
+    const VERSION = 1.3;
 
     const BASE_URl = 'https://www.rtoperator.ru';
 
